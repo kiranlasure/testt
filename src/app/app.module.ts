@@ -3,18 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
-import { DepartmentListComponent } from './department-list/department-list.component';
+import { HomeComponent } from './home/home.component';
+import { MaterialModule } from './material.module';
+import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import { MsgComponent } from './msg/msg.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeListComponent,
-    DepartmentListComponent
+    HomeComponent,
+    MsgComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule,
+    FormsModule,
+    HttpClientModule,
+    FlexLayoutModule
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

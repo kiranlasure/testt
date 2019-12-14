@@ -1,0 +1,20 @@
+<div fxLayout="row" class="msg1">
+    <div class="innerDiv">
+        <p>This is paragraph</p>
+        <button (click)="Clickme()">Click</button>
+        <div>
+            <strong>{{FirstName}}</strong><br>
+            <strong>{{LastName}}</strong> 
+            <!-- It's an type of one way data binding in angular. -->
+        </div>
+
+        <div>
+            <h1 [style.background-color]="green">This is a Blue Heading</h1>
+        </div>
+
+        <div class="myclass">Setting class without binding</div>
+        <h1 [style.back]="green">This is a Blue Heading</h1>
+
+        <button [style.height.px]='height'>Click memmm</button>
+    </div>
+</div>

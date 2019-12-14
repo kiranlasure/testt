@@ -1,0 +1,84 @@
+1. What is Angular 4 and how it differs from Angular 1.x ?
+
+==> Angular 4 is a Javascript framework built around the concept of components,
+       and more precisely, with the Web Components standard in mind.
+    - Angular 4 was completly written in typescript.
+    - Angular 4 is entirely component based.
+     -Angular 4 uses TypeScript. TypeScript will not be used in the browser 
+        directly. So the program code is compiled to JavaScript. This can be achieved 
+        with “Traceur”.
+    - Angular 4 follows module pattern. We need to import the functions ourself
+        and export them when we need anywhere else.
+
+2. What is component decorators in Angular 4?
+==> The main objectives of decorators is to add some metadata to the class that will
+    tell Angular 4 how to process a class.
+    -Angular has many decorators that attach metadata to classes so that it knows what
+     those classes mean and how they should work.
+
+     selector: — define the name of the HTML element in which our component will live.
+     template or templateUrl: — It can be inline string or link an external html file. 
+                                It allows us to tie logic from our component directly to a view
+    styles: — the styles array for our specific component. We can also link external 
+              CSS by styleUrls.
+    providers: — This is the place we are passing the services that we need insider 
+                 our components.
+    Immediately after this decorator or right to it, we need to export a class where 
+                our variables and functions reside that our component uses.
+
+3. What is @NgModule?
+==> An NgModule class describes how the application parts fit together. Every application has
+    at least one NgModule. the root module that we bootstrap to launch the application.
+
+4. What are all the metadata properties of NgModule? And what are they used for?
+==> @NgModule accepts a metadata object that tells Angular how to compile and launch the application.
+        imports – Modules that the application needs or depends on to run like,
+                  the BrowserModule that every application needs to run in a browser.
+        declarations – the application's components, which belongs to the NgModuleclass. 
+                 We must declare every component in an NgModule class. If we use a component 
+                 without declaring it, we'll see a clear error message in the browser console.
+        bootstrap – the root component that Angular creates and inserts into the index.html host web page. 
+                    The application will be launched by creating the components listed in this array.
+
+5. What is Template reference variables?
+==>A template reference variable (#var) is a reference to a DOM element within a template. 
+    We use hash symbol (#) to declare a reference variable in a template.
+
+    ex. <input #name placeholder="Your name">
+        {{name.value}}
+
+        here name refers to the input element. We can Access any property of input in template
+
+6. What are structural directives ?
+==> Structural directives are responsible for HTML layout.
+     -They shape or reshape the DOM’s structure, typically 
+      by adding, removing, or manipulating elements.
+      ex. ngIf, ngSwitch, ngFor.
+    
+7.  What is Directive in Angular 4? How it differs from Components?
+==>  What is Directive in Angular 4? How it differs from Components?
+    -In Angular, a Directive decoraor (@Directive) is used to mark a
+    class as an Angular directive and provides additional metadata that
+     determines how the directive should be processed. Below are the 
+    metadata properties of a directive.
+    selector - css selector that identifies this component in a template.
+    inputs - list of class property names to data-bind as component inputs
+    outputs - list of class property names that expose output events that others can subscribe to
+    providers - list of providers available to this component and its children
+
+8. What are all the types of Directives?
+==> They are attribute directives, structural directives, and components.
+
+    attribute directives: change the appearance or behavior of an element.
+                          For example, *ngStyle and *ngClass.
+    Structural directives: change the DOM layout by adding and removing DOM elements.
+                          For example, *ngIf and *ngFor
+    component directives: Directive with template.
+
+9. What are all the uses of a service?
+==> Services encapsulates business logic and separates them from UI concerns or 
+    the controller concerns, which governs them both.
+    -An example of when to use services would be to transfer data from one controller 
+    to another custom service.
+
+https://www.onlineinterviewquestions.com/angular2-interview-questions/
