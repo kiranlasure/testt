@@ -9,13 +9,15 @@ import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { MsgComponent } from './msg/msg.component';
+import { StylDirective } from './styl.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MsgComponent
+    MsgComponent,
+    StylDirective
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,10 @@ export class HomeComponent implements OnInit {
   para1 = "This is my first web page using an angular cli. I give overflow: scroll property to this";
   para2 = "This is my first web page using an angular cli. I give overflow: scroll property to this";
 
+
+  products = [];
+
+  title = 'Products';
   // topics =[
   //   'Angular','react','View'
   // ];
@@ -25,6 +29,7 @@ export class HomeComponent implements OnInit {
   constructor(){}
 
   ngOnInit() {
+    this.products = this.getProducts();
   }
   // onSubmit(){
   //   this._erollmentservice.enroll(this.userModel)
@@ -34,8 +39,30 @@ export class HomeComponent implements OnInit {
   //   )
   // }
 
+  getProducts() {
+
+    return [
+
+        { 'id': '1', 'title': 'Screw Driver', 'price': 400, 'stock': 11 },
+
+        { 'id': '2', 'title': 'Nut Volt', 'price': 200, 'stock': 5 },
+
+        { 'id': '3', 'title': 'Resistor', 'price': 78, 'stock': 45 },
+
+        { 'id': '4', 'title': 'Tractor', 'price': 20000, 'stock': 1 },
+
+        { 'id': '5', 'title': 'Roller', 'price': 62, 'stock': 15 },
+
+    ];
+
+  }
+
     greet()
     {
         alert("Hi");
+    }
+    displayCounter(count)
+    {
+      console.log(count);
     }
 }

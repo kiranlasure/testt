@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+
+
+
 
 @Component({
   selector: 'app-msg',
@@ -7,19 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MsgComponent implements OnInit {
 
-  FirstName: String = "Kiran";
-  LastName: String = "Lasure"; // write here and use this in view
+  
 
-  firstName1: String = "Karan";
-  height: number= 30;
   constructor() { }
 
-  ngOnInit() {
+   ngOnInit() {
 
+    }
   }
-  Clickme()
-  {
-    alert("This way we can perform Event Binding.");
-  }
-
-}
